@@ -40,6 +40,7 @@ namespace lab4
 
                     if (!conf)
                     {
+
                         central.Restart(item);
                         _ = item.Work(prods[0]);
                     }
