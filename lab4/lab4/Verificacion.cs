@@ -1,7 +1,7 @@
 ﻿using System;
 namespace lab4
 {
-    public class Verificacion : Maquina, IControl
+    public class Verificacion : Maquina
     {
         public Verificacion()
         {

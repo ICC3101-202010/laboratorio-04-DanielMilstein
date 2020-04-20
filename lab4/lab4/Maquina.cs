@@ -7,9 +7,9 @@ namespace lab4
     public abstract class Maquina : IControl
     {
         protected List<String> Memoria;
-        public bool Encendida;
-        public int Memoria_Max;
-        public string Nombre;
+        protected bool Encendida;
+        protected int Memoria_Max;
+        protected string Nombre;
 
         public Maquina()
         {
@@ -23,13 +23,13 @@ namespace lab4
 
         }
 
-        public void Off(Maquina maquina)
+        public void Off()
         {
             Console.WriteLine($"Maquina {Nombre} apagada.");
             Encendida = false;
         }
 
-        public void On(Maquina maquina)
+        public void On()
         {
             Console.WriteLine($"Maquina {Nombre} encendida con memoria {Memoria_Max} .");
             Encendida = true;

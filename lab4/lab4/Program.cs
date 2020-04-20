@@ -9,18 +9,11 @@ namespace lab4
         public static void Main(string[] args)
         {
             Central central = new Central();
-            Recepcion recepcion = new Recepcion();
-            Almacenamiento almacenamiento = new Almacenamiento();
-            Ensamblaje ensamblaje = new Ensamblaje();
-            Verificacion verificacion = new Verificacion();
-            Empaque empaque = new Empaque();
 
-            Maquina[] listaMaq = new Maquina[5] { recepcion, almacenamiento, ensamblaje, verificacion, empaque };
 
-            foreach (Maquina item in listaMaq)
-            {
-                central.On(item);
-            }
+            Maquina[] listaMaq = central.GetMaquinas();
+
+            central.On();
 
             Console.WriteLine("Cuantos productos hoy?");
 
@@ -56,21 +49,7 @@ namespace lab4
                 prods.RemoveAt(0);
             }
 
-
-
-
-
-
-
-
-
-            foreach (Maquina item in listaMaq)
-            {
-                central.Off(item);
-
-            }
-
-
+            central.Off();
         }
     }
 }
