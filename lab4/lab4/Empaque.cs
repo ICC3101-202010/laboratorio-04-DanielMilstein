@@ -1,9 +1,9 @@
 ﻿using System;
 namespace lab4
 {
-    public class Maquina
+    public class Empaque : Maquina, IControl
     {
-        public Maquina()
+        public Empaque()
         {
         }
     }

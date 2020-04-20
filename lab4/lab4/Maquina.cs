@@ -1,10 +1,59 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
 namespace lab4
 {
-    public class Maquina
+    public abstract class Maquina : IControl
     {
+        protected List<String> Memoria;
+        public bool Encendida;
+        public int Memoria_Max;
+
         public Maquina()
         {
+            List<string> memoria = new List<string>();
+            Memoria = memoria;
+
+            Random random = new Random();
+            int mem_max = random.Next(10, 50);
+            Memoria_Max = mem_max;
+
+
+        }
+
+        public void Off(Maquina maquina)
+        {
+            Encendida = false;
+        }
+
+        public void On(Maquina maquina)
+        {
+            Encendida = true;
+        }
+
+        public void Restart(Maquina maquina)
+        {
+            Memoria.Clear();
+        }
+
+        public bool Work(string producto)
+        {
+            int mem = Memoria.Count();
+            int mem_max = Memoria_Max;
+
+
+            if (mem < mem_max)
+            {
+                Memoria.Add(producto);
+                return true;
+            }
+
+            else
+            {
+                Console.WriteLine("Memoria llena");
+                return false;
+            }
         }
     }
 }
