@@ -35,7 +35,7 @@ namespace lab4
 
             for (int i = 0; i < x; i++)
             {
-                prods.Add($"Producto x{ i }");
+                prods.Add($"Producto x{ i +1}");
             }
 
             while (prods.Count() > 0)

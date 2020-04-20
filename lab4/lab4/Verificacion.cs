@@ -5,6 +5,8 @@ namespace lab4
     {
         public Verificacion()
         {
+            string name = "Verificacion";
+            Nombre = name;
         }
     }
 }

@@ -5,6 +5,8 @@ namespace lab4
     {
         public Recepcion()
         {
+            String name = "Recepcion";
+            Nombre = name;
         }
     }
 }

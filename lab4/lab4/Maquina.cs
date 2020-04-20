@@ -9,6 +9,7 @@ namespace lab4
         protected List<String> Memoria;
         public bool Encendida;
         public int Memoria_Max;
+        public string Nombre;
 
         public Maquina()
         {
@@ -24,17 +25,20 @@ namespace lab4
 
         public void Off(Maquina maquina)
         {
+            Console.WriteLine($"Maquina {Nombre} apagada.");
             Encendida = false;
         }
 
         public void On(Maquina maquina)
         {
+            Console.WriteLine($"Maquina {Nombre} encendida con memoria {Memoria_Max} .");
             Encendida = true;
         }
 
         public void Restart(Maquina maquina)
         {
             Memoria.Clear();
+            Console.WriteLine($"Maquina {Nombre} reiniciada.");
         }
 
         public bool Work(string producto)
@@ -46,12 +50,13 @@ namespace lab4
             if (mem < mem_max)
             {
                 Memoria.Add(producto);
+                Console.WriteLine($"{producto} esta siendo procesado por {Nombre}.");
                 return true;
             }
 
             else
             {
-                Console.WriteLine("Memoria llena");
+                Console.WriteLine($"Memoria de maquina {Nombre} llena.");
                 return false;
             }
         }

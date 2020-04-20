@@ -5,6 +5,8 @@ namespace lab4
     {
         public Ensamblaje()
         {
+            string name = "Ensamblaje";
+            Nombre = name;
         }
     }
 }
