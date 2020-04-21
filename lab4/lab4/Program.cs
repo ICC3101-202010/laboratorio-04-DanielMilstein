@@ -40,32 +40,10 @@ namespace lab4
 
                     while (!conf)
                     {
-                        Console.WriteLine("Ingrese que maquina desea reiniciar:\n");
-                        Console.WriteLine($"Para reiniciar {listaMaq[0].Nombre} ingrese 1");
-                        Console.WriteLine($"Para reiniciar {listaMaq[1].Nombre} ingrese 2");
-                        Console.WriteLine($"Para reiniciar {listaMaq[2].Nombre} ingrese 3");
-                        Console.WriteLine($"Para reiniciar {listaMaq[3].Nombre} ingrese 4");
-                        Console.WriteLine($"Para reiniciar {listaMaq[4].Nombre} ingrese 5");
-                        string input = Console.ReadLine();
-
-                        int inp = Convert.ToInt32(input) - 1;  //Asumiendo que el usuario solo va a ingresar uno de esos numeros
-
-                        string maq_sel = listaMaq[inp].Nombre;
-
-                        central.Restart(listaMaq[inp]);
-
+                        central.Restart(central.Restart_Manual());
+                        
                         conf = item.Work(prods[0]);
 
-                        //if (maq_sel == item.Nombre)
-                        //{
-                        //   
-                        //}
-
-
-
-
-                        
-                        
                     }
 
                     
