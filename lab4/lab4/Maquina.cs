@@ -9,7 +9,7 @@ namespace lab4
         protected List<String> Memoria;
         protected bool Encendida;
         protected int Memoria_Max;
-        protected string Nombre;
+        public string Nombre;
 
         public Maquina()
         {
@@ -38,7 +38,7 @@ namespace lab4
         public void Restart(Maquina maquina)
         {
             Memoria.Clear();
-            Console.WriteLine($"Maquina {Nombre} reiniciada.");
+            Console.WriteLine($"Maquina {Nombre} reiniciada.\n");
         }
 
         public bool Work(string producto)
